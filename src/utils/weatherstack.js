@@ -8,7 +8,7 @@ const weatherstack = (latitude, longitude, callback) => {
         } else if (body.error) {
             callback('Unable to find location')
         } else {
-            callback(undefined, body.current.weather_descriptions[0] + ', it is currently ' + body.current.temperature + ' degrees out. It feels like ' + body.current.feelslike + ' degrees out.')
+            callback(undefined, body.current.weather_descriptions[0] + ', it is currently ' + body.current.temperature + ' degrees out. It feels like ' + body.current.feelslike + ' degrees out. The relative humidity is ' + body.current.humidity + ' percent.')
         }
     })
 }
